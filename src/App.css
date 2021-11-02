@@ -1,0 +1,107 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px;
+}
+
+.navbar {
+  height: 10vh;
+  background-color: #364051;
+  color: white;
+}
+
+.navbar .navbar-wrapper {
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .navbar-wrapper h1 {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.navbar .navbar-wrapper h3 {
+  cursor: pointer;
+}
+
+/* Expense Details */
+.expensedetails {
+  height: 250px;
+  background-color: #f7f7f7;
+}
+
+.expense-content h1 {
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.expense-content .add-expense-btn {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background-color: #1c88bf;
+  font-size: 18px;
+  color: white;
+}
+
+/* Filter form */
+.filter-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-content input {
+  border: 1px solid #ccc;
+  width: 250px;
+  padding: 15px 18px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.filter-content input::placeholder {
+  font-size: 18px;
+}
+
+.filter-content select {
+  width: 150px;
+  border: 1px solid cyan;
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+.expense-wrapper-heading {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #666;
+  font-weight: 500;
+}
+
+.ExpenseItemList {
+  list-style: none;
+  padding: 30px;
+  margin-top: -80px;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  color: #313131;
+  margin: 18px 0;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+.expense-item h5 {
+  margin-bottom: 10px;
+}
+
+.expense-item h6 {
+  font: 8px;
+}

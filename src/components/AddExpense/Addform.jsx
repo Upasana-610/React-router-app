@@ -7,7 +7,7 @@ const Addform = () => {
   //Consumer
   let { addExpense } = useContext(GlobalContext);
 
-  const [formData, useFormData] = useState({
+  let [formData, setFormData] = useState({
     descrition: "",
     amount: 0,
     date: "",
@@ -46,10 +46,10 @@ const Addform = () => {
           placeholder="description"
           name="description"
           onChange={handleChange}
-          value={formData.descrition}
+          value={formData.description}
         />
         <input
-          type="text"
+          type="number"
           placeholder="Amount"
           name="amount"
           onChange={handleChange}

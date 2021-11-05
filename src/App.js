@@ -7,15 +7,15 @@ import { GlobalProvider } from "./context/ExpenseContext";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Switch>
-        <GlobalProvider>
+    <GlobalProvider>
+      <Router>
+        <Navbar />
+        <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/addexpense" component={AddExpense} />
-        </GlobalProvider>
-      </Switch>
-    </Router>
+        </Switch>
+      </Router>
+    </GlobalProvider>
   );
 }
 

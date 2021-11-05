@@ -1,6 +1,7 @@
-import React, { createContext, useContext, useReducer } from "react";
-import AppReducer from "./AppReducer";
-import { GlobalContext } from "../../context/ExpenseContext/ExpenseContext";
+import React, { createContext, useReducer } from "react";
+import ExpenseReducer from "./ExpenseReducer";
+
+// import { GlobalContext } from "../../context/ExpenseContext/ExpenseContext";
 
 const initialState = {
   expenses: [],
@@ -10,7 +11,7 @@ const initialState = {
 export const GlobalContext = createContext(initialState);
 
 export const GlobalProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(AppReducer, initialState);
+  const [state, dispatch] = useReducer(ExpenseReducer, initialState);
 
   //   actions
   const addExpense = (newExpense) => {

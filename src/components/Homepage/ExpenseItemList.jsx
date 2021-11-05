@@ -1,7 +1,10 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
+import { GlobalContext } from "../../context/ExpenseContext";
 import ExpenseListItem from "./ExpenseListItem";
 
 const ExpenseItemList = () => {
+  let { expenses } = useContext(GlobalContext);
+  console.log(expenses);
   return (
     <Fragment>
       <div className="container">

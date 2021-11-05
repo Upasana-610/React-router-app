@@ -1,34 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 1000px;
   margin: auto;
-  padding: 50px;
+  padding: 20px 50px;
+}
+
+.dark {
+  background-color: #050000 !important;
 }
 
 .navbar {
+  background-color: #405780;
   height: 10vh;
-  background-color: #364051;
+
+  width: 100%;
   color: white;
 }
 
-.navbar .navbar-wrapper {
-  height: 100%;
-  width: 60%;
-  margin: auto;
+.theme {
+  /* color: #1c88bf; */
+  margin: 10px !important;
+  padding-top: 20px;
+
+  border-radius: 50px;
+  background-color: #ccc;
+  overflow: hidden;
+}
+.theme button {
+  border: none;
+  background-color: transparent;
+  margin: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.theme button .on {
+  color: #b49c10;
+  background-color: #f8fbfc !important;
+  height: 30px;
+  border-radius: 100%;
+
+  /* margin-bottom: 10px; */
+  font-size: 30px;
+  /* cursor: pointer; */
+}
+.theme button .off {
+  color: #0f0f0e !important;
+  /* margin: 0 10px; */
+  /* margin-bottom: 10px; */
+  font-size: 30px;
+  /* cursor: pointer; */
+}
+
+.navbar-wrapper {
+  /* width: 60%; */
+  /* margin: auto; */
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding-bottom: 20px;
 }
 
-.navbar .navbar-wrapper h1 {
-  font-size: 28px;
-  cursor: pointer;
-}
-
-.navbar .navbar-wrapper h3 {
-  cursor: pointer;
+.navbar-wrapper h1 {
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
 /* Expense Details */
+.expenseDark {
+  background-color: rgb(105, 102, 102) !important;
+  color: white !important;
+}
 .expensedetails {
   height: 250px;
   background-color: #f7f7f7;
@@ -39,6 +85,9 @@
   font-weight: 500;
 }
 
+.expenseBtn {
+  background-color: black !important;
+}
 .expense-content .add-expense-btn {
   padding: 15px 20px;
   border: none;
@@ -49,6 +98,10 @@
 }
 
 /* Filter form */
+.filterDark {
+  background-color: rgb(19, 18, 18) !important;
+  color: white;
+}
 .filter-content {
   display: flex;
   justify-content: space-between;
@@ -73,7 +126,118 @@
   font-size: 18px;
 }
 
+/* .expense-wrapper-heading */
 .expense-wrapper-heading {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* .expense-item list*/
+.expense-itemList-dark {
+  background-color: rgb(61, 59, 59);
+}
+.ExpenseItemList {
+  list-style: none;
+  padding: 30px;
+  margin-top: -30px;
+}
+/* expense item */
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  color: #313131;
+  margin: 18px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+}
+.expense-item-dark {
+  color: rgb(252, 250, 250);
+}
+.expense-item h5 {
+  margin-bottom: 10px;
+}
+
+.expense-item h6 {
+  font: 8px;
+}
+
+/* Dark theme */
+/* .dark .navbar {
+  height: 10vh;
+  background-color: #364051;
+  color: white;
+}
+
+.dark .navbar .navbar-wrapper {
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark .navbar .navbar-wrapper h1 {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.dark .navbar .navbar-wrapper h3 {
+  cursor: pointer;
+} */
+
+/* Expense Details */
+/* .dark .expensedetails {
+  height: 250px;
+  background-color: #f7f7f7;
+}
+
+.dark .expense-content h1 {
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.dark .expense-content .add-expense-btn {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background-color: #1c88bf;
+  font-size: 18px;
+  color: white;
+} */
+
+/* Filter form */
+/* .dark .filter-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dark .filter-content input {
+  border: 1px solid #ccc;
+  width: 250px;
+  padding: 15px 18px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.dark .filter-content input::placeholder {
+  font-size: 18px;
+}
+
+.dark .filter-content select {
+  width: 150px;
+  border: 1px solid cyan;
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+.dark .expense-wrapper-heading {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
@@ -81,13 +245,13 @@
   font-weight: 500;
 }
 
-.ExpenseItemList {
+.dark .ExpenseItemList {
   list-style: none;
   padding: 30px;
   margin-top: -80px;
 }
 
-.expense-item {
+.dark .expense-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,10 +262,10 @@
   padding: 15px;
 }
 
-.expense-item h5 {
+.dark .expense-item h5 {
   margin-bottom: 10px;
 }
 
-.expense-item h6 {
+.dark .expense-item h6 {
   font: 8px;
-}
+} */

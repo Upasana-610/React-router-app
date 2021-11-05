@@ -5,6 +5,11 @@ export default (state, action) => {
         ...state,
         expenses: [...state.expenses, action.payload],
       };
+    case "ADD_THEME":
+      return {
+        ...state,
+        theme: action.payload,
+      };
     default:
       return state;
   }

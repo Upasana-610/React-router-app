@@ -8,7 +8,7 @@ const Addform = () => {
   let { addExpense } = useContext(GlobalContext);
 
   let [formData, setFormData] = useState({
-    descrition: "",
+    description: "",
     amount: 0,
     date: "",
     note: "",
@@ -20,18 +20,19 @@ const Addform = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
 
     //clearInputs
     clearInputs();
 
     //redirect to homepage
     history.push("/");
+    addExpense(formData);
   };
 
   const clearInputs = () => {
     setFormData({
-      descrition: "",
+      description: "",
       amount: 0,
       date: "",
       note: "",

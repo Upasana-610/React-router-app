@@ -5,6 +5,7 @@ import ExpenseReducer from "./ExpenseReducer";
 
 const initialState = {
   expenses: [],
+  theme: true,
 };
 
 // Created Context
@@ -21,11 +22,20 @@ export const GlobalProvider = ({ children }) => {
     });
   };
 
+  const addTheme = (newtheme) => {
+    dispatch({
+      type: "ADD_THEME",
+      payload: newtheme,
+    });
+  };
+
   return (
     <GlobalContext.Provider
       value={{
         expenses: state.expenses,
         addExpense: addExpense,
+        theme: state.theme,
+        addTheme: addTheme,
       }}
     >
       {children}

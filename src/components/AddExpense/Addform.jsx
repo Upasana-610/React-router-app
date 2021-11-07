@@ -5,7 +5,15 @@ import { useHistory } from "react-router-dom";
 const Addform = () => {
   const history = useHistory();
   //Consumer
-  let { addExpense } = useContext(GlobalContext);
+  let {
+    addExpense,
+
+    expenses,
+
+    application,
+    fitness,
+    addFitness,
+  } = useContext(GlobalContext);
 
   let [formData, setFormData] = useState({
     description: "",
@@ -27,7 +35,20 @@ const Addform = () => {
 
     //redirect to homepage
     history.push("/");
-    addExpense(formData);
+    if (application.budget === true) {
+      addExpense(formData);
+    } else {
+      addFitness(formData);
+    }
+
+    // console.log(expenses);
+    // console.log("00");
+
+    // console.log(view);
+    // console.log("00");
+    // clearView({});
+    // console.log("00");
+    // console.log(view);
   };
 
   const clearInputs = () => {

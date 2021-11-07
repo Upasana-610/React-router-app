@@ -3,16 +3,12 @@ import { GlobalContext } from "../../context/ExpenseContext";
 import ExpenseListItem from "./ExpenseListItem";
 
 const ExpenseItemList = () => {
-  let { expenses, theme } = useContext(GlobalContext);
-  console.log(expenses);
+  let { theme } = useContext(GlobalContext);
+
   return (
     <Fragment>
       <div className={`container ${theme ? "" : "expense-itemList-dark"} `}>
         <ul className="ExpenseItemList ">
-          <ExpenseListItem />
-          <ExpenseListItem />
-          <ExpenseListItem />
-          <ExpenseListItem />
           <ExpenseListItem />
         </ul>
       </div>

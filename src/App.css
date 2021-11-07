@@ -4,10 +4,15 @@
   box-sizing: border-box;
 }
 
+.darkBack {
+  background-color: rgb(121, 118, 117);
+}
+
 .container {
   max-width: 1000px;
   margin: auto;
   padding: 20px 50px;
+  position: relative;
 }
 
 .dark {
@@ -17,25 +22,24 @@
 .navbar {
   background-color: #405780;
   height: 10vh;
-
+  z-index: 1 !important;
   width: 100%;
   color: white;
 }
 
 .theme {
-  /* color: #1c88bf; */
-  margin: 10px !important;
-  padding-top: 20px;
-
-  border-radius: 50px;
-  background-color: #ccc;
+  padding-top: 10px;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: transparent;
   overflow: hidden;
 }
 .theme button {
   border: none;
   background-color: transparent;
-  margin: 10px;
-  margin-bottom: 20px;
+  margin: 5px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 
@@ -50,7 +54,7 @@
   /* cursor: pointer; */
 }
 .theme button .off {
-  color: #0f0f0e !important;
+  color: #e9e9d9 !important;
   /* margin: 0 10px; */
   /* margin-bottom: 10px; */
   font-size: 30px;
@@ -131,7 +135,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 30px;
-  color: #666;
+  color: black;
   font-weight: 500;
 }
 
@@ -156,6 +160,10 @@
   border-radius: 5px;
   padding: 15px;
 }
+.expense-item p {
+  margin: 10px;
+  font-size: 18px;
+}
 .expense-item-dark {
   color: rgb(252, 250, 250);
 }
@@ -165,4 +173,52 @@
 
 .expense-item h6 {
   font: 8px;
+}
+
+/* settings */
+
+.rightnav {
+  display: flex;
+  align-items: center;
+}
+
+.settings {
+  color: rgb(105, 26, 26);
+  cursor: pointer;
+}
+
+.Settingsform {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Settingsform button {
+  border: none;
+  background-color: rgb(204, 179, 179);
+  padding: 30px;
+  font-style: italic;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.Settingsform h2 {
+  margin-bottom: 10px;
+  color: rgb(20, 19, 19);
+}
+
+.profile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile label {
+  margin: 10px;
+}
+
+.profile input {
+  border: solid;
 }

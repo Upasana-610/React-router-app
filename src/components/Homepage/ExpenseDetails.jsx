@@ -4,9 +4,8 @@ import { useHistory } from "react-router-dom";
 import { GlobalContext } from "../../context/ExpenseContext";
 
 const ExpenseDetails = () => {
-  let { theme } = useContext(GlobalContext);
+  let { theme, application } = useContext(GlobalContext);
   let history = useHistory();
-  console.log(history);
 
   const handleClick = () => {
     history.push("/addexpense");
@@ -15,14 +14,18 @@ const ExpenseDetails = () => {
     <Fragment>
       <div className={`${theme ? "" : "expenseDark"} expensedetails `}>
         <div className="container expense-content">
-          <h1>Viewing 0 expenses totalling $0.00</h1>
+          <h1>
+            {application.budget
+              ? "Viewing 0 expenses totalling $0.00"
+              : "These are your Fitness Records"}
+          </h1>
           {/* <a href="/addexpense">AddExpense</a> */}
           {/* <Link to="/addexpense">Add Expense</Link> */}
           <button
             className={` ${theme ? "" : "expenseBtn"} add-expense-btn`}
             onClick={handleClick}
           >
-            Add Expense
+            {application.budget ? "Add Expense" : "Add Fitness Records"}
           </button>
         </div>
       </div>

@@ -1,26 +1,15 @@
-import React, { Fragment, useContext, useState } from "react";
+import React, { Fragment, useContext, useState, useEffect } from "react";
 import { GlobalContext } from "../../context/ExpenseContext";
-import { useHistory } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
+import { useHistory, useParams } from "react-router-dom";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { isValidElement } from "react";
 import { LayoutContext } from "../../context/LayoutContext";
 
-const Addform = () => {
-  const history = useHistory();
+const EditForm = () => {
+  let { filterData, filterItem, editData, expenses, application } =
+    useContext(GlobalContext);
   let { layout } = useContext(LayoutContext);
-  //Consumer
-  let {
-    addExpense,
-
-    expenses,
-
-    application,
-    fitness,
-    addFitness,
-  } = useContext(GlobalContext);
-
   let [formData, setFormData] = useState({
     description: "",
     amount: "",
@@ -28,6 +17,17 @@ const Addform = () => {
     note: "",
     id: "",
   });
+  let history = useHistory();
+
+  let params = useParams();
+
+  useEffect(() => {
+    filterData(params.id);
+  }, []);
+
+  useEffect(() => {
+    setFormData({ ...formData, ...filterItem });
+  }, [filterItem]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -35,19 +35,16 @@ const Addform = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (isValid(e)) {
-      //clearInputs
+    if (isValid()) {
+      editData(formData);
       clearInputs();
       save();
       //redirect to homepage
+
       setTimeout(() => {
         history.push("/");
+        console.log(expenses);
       }, 3000);
-      if (application.budget === true) {
-        addExpense({ ...formData, id: uuidv4() });
-      } else {
-        addFitness(formData);
-      }
     }
   };
 
@@ -81,7 +78,6 @@ const Addform = () => {
       progress: undefined,
     });
   }
-
   function save() {
     toast.success("Saved Successfully", {
       position: "bottom-right",
@@ -97,7 +93,7 @@ const Addform = () => {
   const clearInputs = () => {
     setFormData({
       description: "",
-      amount: "",
+      amount: 0,
       date: "",
       note: "",
       id: "",
@@ -163,4 +159,4 @@ const Addform = () => {
   );
 };
 
-export default Addform;
+export default EditForm;

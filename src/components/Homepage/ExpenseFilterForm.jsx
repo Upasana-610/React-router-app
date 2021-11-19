@@ -2,7 +2,7 @@ import React, { Fragment, useContext, useState } from "react";
 import { GlobalContext } from "../../context/ExpenseContext";
 
 const ExpenseFilterForm = () => {
-  let { theme, expenses, addFilter, filter, application, filterDate, addDate } =
+  let {  expenses, addFilter, filter, application, filterDate, addDate } =
     useContext(GlobalContext);
   let [expenseFilter, setExpenseFilter] = useState("");
 
@@ -22,7 +22,7 @@ const ExpenseFilterForm = () => {
   // const addingexpenseFilter = () => {};
 
   return (
-    <div className={`ExpenseFilterForm ${theme ? "" : "filterDark"}`}>
+    <div className={`ExpenseFilterForm `}>
       <div className="container filter-content ">
         <input
           type="text"

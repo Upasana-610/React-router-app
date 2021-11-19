@@ -6,8 +6,9 @@ import ExpenseReducer from "./ExpenseReducer";
 const initialState = {
   expenses: [],
   fitness: [],
-  theme: true,
+
   filter: "",
+  filterItem: "",
   filterDate: "",
   view: [{ description: "Sorry Empty List" }],
   appName: "Budget App",
@@ -49,13 +50,6 @@ export const GlobalProvider = ({ children }) => {
     });
   };
 
-  const addTheme = (newtheme) => {
-    dispatch({
-      type: "ADD_THEME",
-      payload: newtheme,
-    });
-  };
-
   const addAppName = (newName) => {
     dispatch({
       type: "ADD_NAME",
@@ -70,13 +64,26 @@ export const GlobalProvider = ({ children }) => {
     });
   };
 
+  const filterData = (id) => {
+    dispatch({
+      type: "FILTER_ITEM",
+      payload: id,
+    });
+  };
+
+  const editData = (data) => {
+    dispatch({
+      type: "EDIT_ITEM",
+      payload: { data },
+    });
+  };
+
   return (
     <GlobalContext.Provider
       value={{
         expenses: state.expenses,
         addExpense: addExpense,
-        theme: state.theme,
-        addTheme: addTheme,
+
         filter: state.filter,
         addFilter: addFilter,
         filterDate: state.filterDate,
@@ -89,6 +96,9 @@ export const GlobalProvider = ({ children }) => {
         addApplication: addApplication,
         fitness: state.fitness,
         addFitness: addFitness,
+        filterItem: state.filterItem,
+        filterData: filterData,
+        editData: editData,
       }}
     >
       {children}

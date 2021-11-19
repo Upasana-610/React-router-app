@@ -1,17 +1,20 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import DarkModeToggle from "react-dark-mode-toggle";
 
-import { FaSun } from "react-icons/fa";
-import { FaMoon } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
 
 import { GlobalContext } from "../context/ExpenseContext";
-import { FiSettings, FiHome } from "react-icons/fi";
+import { FcSettings } from "react-icons/fc";
+import { LayoutContext } from "../context/LayoutContext";
+import { AiOutlineBorderInner } from "react-icons/ai";
 const Navbar = () => {
-  let { addTheme, appName, addDate } = useContext(GlobalContext);
-  let { theme } = useContext(GlobalContext);
+  let { appName, addDate } = useContext(GlobalContext);
+
+  let { layout, changeLayout, color } = useContext(LayoutContext);
   let history = useHistory();
   let t = true;
   let f = false;
+  const [isDarkMode, setIsDarkMode] = useState(() => false);
 
   const clickSettings = () => {
     history.push("/settings");
@@ -22,36 +25,54 @@ const Navbar = () => {
     history.push("/");
   };
 
-  // setTheme(true);
-  console.log(appName);
-  return (
-    <div className={`navbar ${theme ? "" : "dark"} `}>
-      {theme
-        ? document.body.classList.remove("darkBack")
-        : document.body.classList.add("darkBack")}
-      <div className={` navbar-wrapper container `}>
-        <h1>{appName}</h1>
-        <div className="rightnav">
-          <span className="theme">
-            <button
-              onClick={() => {
-                addTheme(t);
-              }}
-            >
-              <FaSun className={` ${theme ? "on" : "off"} `} />
-            </button>
+  const changeBody = () => {};
 
-            <button
-              onClick={() => {
-                addTheme(f);
-              }}
-            >
-              <FaMoon className={` ${theme ? "off" : "on"} `} />
-            </button>
-          </span>
-          <FiSettings classname="settings" onClick={clickSettings} />
-          <FiHome onClick={clickHome} />
+  return (
+    <div
+      className={`navbar  ${
+        layout === "2"
+          ? "navbargreen"
+          : layout === "3"
+          ? "navbarpurple"
+          : layout === "0"
+          ? "navbardark"
+          : ""
+      }`}
+    >
+      <div className={` navbar-wrapper container `}>
+        <h1
+          className={`${layout === "0" ? "darkwriting1" : ""}`}
+          onClick={clickHome}
+        >
+          {appName}
+        </h1>
+        <div className="rightnav">
+          <div
+            className="Theme"
+            onClick={() => {
+              console.log(color);
+              isDarkMode ? changeLayout(color) : changeLayout("0");
+              changeBody();
+            }}
+          >
+            <DarkModeToggle
+              onChange={setIsDarkMode}
+              checked={isDarkMode}
+              size={80}
+            />
+          </div>
+
+          <FcSettings style={{ color: "#9c1717" }} onClick={clickSettings} />
         </div>
+      </div>
+      <div style={{ visibility: "hidden" }}>
+        {layout === "2"
+          ? (document.body.className = "bodyGreen")
+          : layout === "3"
+          ? (document.body.className = "bodyPurple")
+          : layout === "0"
+          ? (document.body.className = "bodyDark")
+          : (document.body.className = "")}
       </div>
     </div>
   );

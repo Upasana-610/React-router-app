@@ -1,14 +1,11 @@
 import React, { Fragment } from "react";
+import { useContext } from "react/cjs/react.development";
 import ExpenseDetails from "../../components/Homepage/ExpenseDetails";
-import ExpenseFilterForm from "../../components/Homepage/ExpenseFilterForm";
-import ExpenseWrapper from "../../components/Homepage/ExpenseWrapper";
 
 const HomePage = () => {
   return (
     <Fragment>
       <ExpenseDetails />
-      <ExpenseFilterForm />
-      <ExpenseWrapper />
     </Fragment>
   );
 };

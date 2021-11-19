@@ -1,11 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Shalimar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.darkBack {
-  background-color: rgb(121, 118, 117);
+body {
+  background: rgb(255, 235, 0);
+  background: linear-gradient(
+    18deg,
+    rgba(255, 235, 0, 1) 0%,
+    rgba(255, 106, 0, 1) 33%,
+    rgba(255, 209, 0, 1) 58%,
+    rgba(255, 149, 1, 1) 76%
+  );
 }
 
 .container {
@@ -15,50 +25,22 @@
   position: relative;
 }
 
-.dark {
-  background-color: #050000 !important;
-}
-
 .navbar {
-  background-color: #405780;
+  background: rgb(255, 235, 0);
+  background: linear-gradient(
+    18deg,
+    rgba(255, 235, 0, 1) 0%,
+    rgba(255, 106, 0, 1) 33%,
+    rgba(255, 209, 0, 1) 58%,
+    rgba(255, 149, 1, 1) 76%
+  );
   height: 10vh;
   z-index: 1 !important;
   width: 100%;
-  color: white;
 }
 
-.theme {
-  padding-top: 10px;
-  width: 100px;
-  height: 50px;
-  border-radius: 20px;
-  background-color: transparent;
-  overflow: hidden;
-}
-.theme button {
-  border: none;
-  background-color: transparent;
-  margin: 5px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.theme button .on {
-  color: #b49c10;
-  background-color: #f8fbfc !important;
-  height: 30px;
-  border-radius: 100%;
-
-  /* margin-bottom: 10px; */
-  font-size: 30px;
-  /* cursor: pointer; */
-}
-.theme button .off {
-  color: #e9e9d9 !important;
-  /* margin: 0 10px; */
-  /* margin-bottom: 10px; */
-  font-size: 30px;
-  /* cursor: pointer; */
+.rightnav {
+  display: flex;
 }
 
 .navbar-wrapper {
@@ -70,22 +52,90 @@
 }
 
 .navbar-wrapper h1 {
-  font-size: 20px;
-  margin-bottom: 30px;
+  cursor: pointer;
+  font-size: 40px;
+  margin-bottom: 10px;
+  background: #959595;
+  background: -webkit-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: -moz-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Shalimar", cursive;
 }
 
 /* Expense Details */
-.expenseDark {
-  background-color: rgb(105, 102, 102) !important;
-  color: white !important;
-}
+
 .expensedetails {
-  height: 250px;
-  background-color: #f7f7f7;
+  height: 400px;
+  background: white;
+}
+.expense-content {
+  padding: 50px;
 }
 
 .expense-content h1 {
   margin-bottom: 30px;
+  background: -webkit-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: -moz-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: linear-gradient(
+    to right,
+    #3d3b3b 0%,
+    #743030 46%,
+    #7a5757 50%,
+    #201f1f 53%,
+    #070606 76%,
+    #383838 87%,
+    #4b4545 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Noto Serif", serif;
   font-weight: 500;
 }
 
@@ -96,16 +146,81 @@
   padding: 15px 20px;
   border: none;
   outline: none;
-  background-color: #1c88bf;
-  font-size: 18px;
-  color: white;
+  background: rgb(250, 250, 192);
+  background: linear-gradient(
+    18deg,
+    rgba(250, 250, 192, 1) 30%,
+    rgba(230, 240, 49, 1) 77%
+  );
+  box-shadow: 0px 0px 8px 4px rgba(209, 175, 9, 0.74) inset;
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(209, 175, 9, 0.74) inset;
+  -moz-box-shadow: 0px 0px 8px 4px rgba(209, 175, 9, 0.74) inset;
+  /* color: white; */
+  border-radius: 5px;
+
+  font-family: "Noto Serif", serif;
+}
+
+.expense-content .add-expense-btn p {
+  background: #959595;
+  font-size: 20px;
+  background: -webkit-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: -moz-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: linear-gradient(
+    to right,
+    #756e6e 0%,
+    #743030 46%,
+    #7a5757 50%,
+    #9e8a8a 53%,
+    #050404 76%,
+    #383838 87%,
+    #b9a2a2 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+}
+
+.expense-content .add-expense-btn:hover {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background: rgb(255, 235, 0);
+  background: linear-gradient(
+    18deg,
+    rgba(255, 235, 0, 1) 0%,
+    rgba(255, 106, 0, 1) 33%,
+    rgba(255, 209, 0, 1) 58%,
+    rgba(255, 149, 1, 1) 76%
+  );
+
+  /* color: white; */
+  border-radius: 5px;
+  font-family: "Noto Serif", serif;
+  cursor: pointer;
 }
 
 /* Filter form */
-.filterDark {
-  background-color: rgb(19, 18, 18) !important;
-  color: white;
-}
+
 .filter-content {
   display: flex;
   justify-content: space-between;
@@ -125,24 +240,76 @@
 
 .filter-content select {
   width: 150px;
-  border: 1px solid cyan;
+  border: 1px solid rgb(198, 211, 211);
+  border-radius: 5px;
   padding: 0 10px;
   font-size: 18px;
 }
 
 /* .expense-wrapper-heading */
+
+.ExpenseWrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: px 50px;
+  background: rgb(250, 250, 192);
+  background: linear-gradient(
+    18deg,
+    rgba(250, 250, 192, 1) 30%,
+    rgba(230, 240, 49, 1) 77%
+  );
+  box-shadow: 0px 0px 14px 5px rgba(99, 41, 0, 0.74);
+  -webkit-box-shadow: 0px 0px 14px 5px rgba(99, 41, 0, 0.74);
+  -moz-box-shadow: 0px 0px 14px 5px rgba(99, 41, 0, 0.74);
+
+  border-radius: 10px;
+}
 .expense-wrapper-heading {
   display: flex;
   justify-content: space-between;
   font-size: 30px;
-  color: black;
+
   font-weight: 500;
+}
+.expense-wrapper-heading h3 {
+  background: -webkit-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: -moz-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: linear-gradient(
+    to right,
+    #756e6e 0%,
+    #743030 46%,
+    #7a5757 50%,
+    #9e8a8a 53%,
+    #050404 76%,
+    #383838 87%,
+    #b9a2a2 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
 }
 
 /* .expense-item list*/
-.expense-itemList-dark {
-  background-color: rgb(61, 59, 59);
-}
+
 .ExpenseItemList {
   list-style: none;
   padding: 30px;
@@ -159,66 +326,775 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
+  -webkit-box-shadow: 0px 1px 13px 0px rgba(119, 50, 50, 0.65);
+  -moz-box-shadow: 0px 1px 13px 0px rgba(119, 50, 50, 0.65);
+  box-shadow: 0px 1px 13px 0px rgba(119, 50, 50, 0.65);
+}
+
+.expense-item h5,
+h6,
+p,
+strong {
+  background: -webkit-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: -moz-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: linear-gradient(
+    to right,
+    #3d3b3b 0%,
+    #743030 46%,
+    #7a5757 50%,
+    #201f1f 53%,
+    #070606 76%,
+    #383838 87%,
+    #4b4545 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Noto Serif", serif;
+  font-weight: 500;
+}
+
+.expense-item strong {
+  display: flex;
+  align-items: center;
+}
+
+.expense-item strong i {
+  font-size: 20px;
+  margin: 10px;
 }
 .expense-item p {
   margin: 10px;
   font-size: 18px;
 }
-.expense-item-dark {
-  color: rgb(252, 250, 250);
-}
+
 .expense-item h5 {
   margin-bottom: 10px;
+  font-size: 25px;
 }
 
 .expense-item h6 {
-  font: 8px;
+  font-size: 13px;
 }
 
 /* settings */
-
-.rightnav {
-  display: flex;
-  align-items: center;
-}
-
-.settings {
-  color: rgb(105, 26, 26);
-  cursor: pointer;
-}
 
 .Settingsform {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background: rgb(250, 250, 192);
+  background: linear-gradient(
+    18deg,
+    rgba(250, 250, 192, 1) 30%,
+    rgba(230, 240, 49, 1) 77%
+  );
+  width: 100%;
+  height: 80%;
+  padding: 40px;
 }
 .Settingsform button {
-  border: none;
-  background-color: rgb(204, 179, 179);
-  padding: 30px;
+  font-size: 18px;
+  color: #313131;
+  margin: 18px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  -webkit-box-shadow: 0px 1px 13px 0px rgba(119, 50, 50, 0.65);
+  -moz-box-shadow: 0px 1px 13px 0px rgba(119, 50, 50, 0.65);
+  box-shadow: 0px 1px 13px 0px rgba(119, 50, 50, 0.65);
+  padding: 20px;
   font-style: italic;
-  font-size: 20px;
+  width: 300px;
   cursor: pointer;
-  margin: 10px;
+  display: block;
+  background-color: transparent;
+  text-align: left;
 }
 
-.Settingsform h2 {
+.Settingsform h2,
+button {
   margin-bottom: 10px;
-  color: rgb(20, 19, 19);
+  background: -webkit-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: -moz-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: linear-gradient(
+    to right,
+    #691212 0%,
+    #743030 46%,
+    #7a5757 50%,
+    #201f1f 53%,
+    #070606 76%,
+    #383838 87%,
+    #4b4545 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Noto Serif", serif;
 }
 
 .profile {
+  width: 100%;
+  height: 80vh;
+  padding: 40px;
+  background: rgb(250, 250, 192);
+  background: linear-gradient(
+    18deg,
+    rgba(250, 250, 192, 1) 30%,
+    rgba(230, 240, 49, 1) 77%
+  );
+}
+
+.profile form {
+  background: rgb(254, 251, 251);
+  background: linear-gradient(
+    18deg,
+    rgba(254, 251, 251, 1) 0%,
+    rgba(223, 190, 137, 1) 58%
+  );
+}
+
+.profile form label,
+h2,
+ul li {
+  margin-bottom: 10px;
+  background: -webkit-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: -moz-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: linear-gradient(
+    to right,
+    #691212 0%,
+    #743030 46%,
+    #7a5757 50%,
+    #201f1f 53%,
+    #070606 76%,
+    #383838 87%,
+    #4b4545 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Noto Serif", serif;
+}
+
+/* Main layout */
+.mainLayout {
+  width: 100%;
+  height: 80vh;
+  padding: 40px;
+  background: rgb(250, 250, 192);
+  background: linear-gradient(
+    18deg,
+    rgba(250, 250, 192, 1) 30%,
+    rgba(230, 240, 49, 1) 77%
+  );
+}
+
+.mainLayout h1 {
+  margin-bottom: 10px;
+  background: -webkit-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: -moz-linear-gradient(
+    to right,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  background: linear-gradient(
+    to right,
+    #691212 0%,
+    #743030 46%,
+    #7a5757 50%,
+    #201f1f 53%,
+    #070606 76%,
+    #383838 87%,
+    #4b4545 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Noto Serif", serif;
+}
+.Lay {
+  font-size: 18px;
+  color: #313131;
+  margin: 18px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  -webkit-box-shadow: 0px 1px 13px 0px rgba(119, 50, 50, 0.65);
+  -moz-box-shadow: 0px 1px 13px 0px rgba(119, 50, 50, 0.65);
+  box-shadow: 0px 1px 13px 0px rgba(119, 50, 50, 0.65);
+  padding: 20px;
+  font-style: italic;
+  width: 300px;
+  cursor: pointer;
+  display: block;
+
+  text-align: left;
+}
+
+.one {
+  background: rgb(255, 235, 0);
+  background: linear-gradient(
+    18deg,
+    rgba(255, 235, 0, 1) 0%,
+    rgba(255, 106, 0, 1) 33%,
+    rgba(255, 209, 0, 1) 58%,
+    rgba(255, 149, 1, 1) 76%
+  );
+}
+
+.two {
+  background: rgb(255, 235, 0) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(141, 179, 2) 0%,
+    rgb(208, 223, 75) 33%,
+    rgb(143, 191, 12) 58%,
+    rgb(171, 233, 72) 76%
+  ) !important;
+}
+.three {
+  background: rgb(243, 156, 207) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(167, 70, 135) 0%,
+    rgb(208, 123, 172),
+    rgb(182, 98, 154) 33%,
+    58%,
+    rgb(231, 139, 194) 76%
+  ) !important;
+}
+
+.mainLayoutGreen {
+  background: rgb(255, 255, 255) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(255, 255, 255) 30%,
+    rgb(148, 251, 169) 77%
+  ) !important;
+}
+
+.mainLayoutPurple {
+  background: rgb(255, 255, 255) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(255, 255, 255) 30%,
+    rgb(225, 198, 180) 77%
+  ) !important;
+}
+
+/* Form */
+.formdiv {
+  height: 90vh;
+  width: 100%;
+  background: rgb(254, 251, 251);
+  background: linear-gradient(
+    18deg,
+    rgba(254, 251, 251, 1) 0%,
+    rgba(223, 190, 137, 1) 58%
+  );
+}
+form {
+  /*  */
+  padding: 20px 40px;
+  padding-top: 50px;
+  /* position realtive in container */
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 55%;
+  background-color: white;
   transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px 4px rgba(145, 94, 38, 0.75);
+  -webkit-box-shadow: 0px 0px 12px 4px rgba(145, 94, 38, 0.75);
+  -moz-box-shadow: 0px 0px 12px 4px rgba(145, 94, 38, 0.75);
 }
 
-.profile label {
-  margin: 10px;
+form input {
+  display: block;
+  border: none;
+  box-shadow: 0px 0px 2px 2px rgba(94, 91, 84, 0.75) inset;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(94, 91, 84, 0.75) inset;
+  -moz-box-shadow: 0px 0px 2px 2px rgba(94, 91, 84, 0.75) inset;
+
+  border-radius: 5px;
+  padding: 10px;
+  width: 400px;
+  margin: auto;
+  margin-bottom: 30px;
 }
 
-.profile input {
-  border: solid;
+form textarea {
+  display: block;
+  border: none;
+  box-shadow: 0px 0px 2px 2px rgba(94, 91, 84, 0.75) inset;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(94, 91, 84, 0.75) inset;
+  -moz-box-shadow: 0px 0px 2px 2px rgba(94, 91, 84, 0.75) inset;
+
+  border-radius: 5px;
+  padding: 10px;
+  width: 400px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+/* body,navbar,btn :hover */
+/* Expense item writing,navbar logo */
+/* settings form h2,btn */
+/* expense content h1 */
+/* expense item and settings form btn shadow */
+/* addexpense btn.expense wrapper,seetingform background */
+/* expense wrapper shadow ,add expense btn shdow */
+
+/* GREEN */
+.navbargreen {
+  background: rgb(255, 235, 0);
+  background: linear-gradient(
+    18deg,
+    rgb(141, 179, 2) 0%,
+    rgb(208, 223, 75) 33%,
+    rgb(143, 191, 12) 58%,
+    rgb(171, 233, 72) 76%
+  );
+  height: 10vh;
+  z-index: 1 !important;
+  width: 100%;
+}
+
+.expense-contentbtnGreen {
+  background: rgb(255, 255, 255) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(255, 255, 255) 30%,
+    rgb(148, 251, 169) 77%
+  ) !important;
+  box-shadow: 0px 0px 8px 4px rgba(9, 209, 162, 0.74) inset !important;
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(132, 182, 194, 0.74) inset !important;
+  -moz-box-shadow: 0px 0px 8px 4px rgba(9, 209, 186, 0.74) inset !important;
+  /* color: white; */
+}
+
+.expense-contentbtnGreen:hover {
+  background: rgb(255, 235, 0) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(141, 179, 2) 0%,
+    rgb(208, 223, 75) 33%,
+    rgb(143, 191, 12) 58%,
+    rgb(171, 233, 72) 76%
+  ) !important;
+  /* color: white; */
+}
+
+.ExpenseWrapperGreen {
+  background: rgb(255, 255, 255) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(255, 255, 255) 30%,
+    rgb(148, 251, 169) 77%
+  ) !important;
+  box-shadow: 0px 0px 14px 5px rgba(0, 99, 51, 0.74) !important;
+  -webkit-box-shadow: 0px 0px 14px 5px rgba(0, 99, 81, 0.74) !important;
+  -moz-box-shadow: 0px 0px 14px 5px rgba(89, 99, 0, 0.74) !important;
+}
+
+.bodyGreen {
+  background: rgb(255, 235, 0) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(141, 179, 2) 0%,
+    rgb(208, 223, 75) 33%,
+    rgb(143, 191, 12) 58%,
+    rgb(171, 233, 72) 76%
+  ) !important;
+}
+
+.expense-itemGreen {
+  box-shadow: 0px 0px 14px 5px rgba(0, 99, 51, 0.74) !important;
+  -webkit-box-shadow: 0px 0px 14px 5px rgba(0, 99, 81, 0.74) !important;
+  -moz-box-shadow: 0px 0px 14px 5px rgba(89, 99, 0, 0.74) !important;
+}
+.SettingsformGreen {
+  background: rgb(255, 255, 255) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(255, 255, 255) 30%,
+    rgb(148, 251, 169) 77%
+  ) !important;
+}
+.SettingsformbuttonGreen {
+  box-shadow: 0px 0px 14px 5px rgba(0, 99, 51, 0.74) !important;
+  -webkit-box-shadow: 0px 0px 14px 5px rgba(0, 99, 81, 0.74) !important;
+  -moz-box-shadow: 0px 0px 14px 5px rgba(89, 99, 0, 0.74) !important;
+}
+
+/* PURPLE */
+.navbarpurple {
+  background: rgb(243, 156, 207) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(167, 70, 135) 0%,
+    rgb(208, 123, 172),
+    rgb(182, 98, 154) 33%,
+    58%,
+    rgb(231, 139, 194) 76%
+  ) !important;
+}
+
+.expense-contentbtnPurple {
+  background: rgb(255, 255, 255) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(255, 255, 255) 30%,
+    rgb(225, 198, 180) 77%
+  ) !important;
+  box-shadow: 0px 0px 8px 4px rgba(99, 0, 16, 0.74) inset !important;
+  -webkit-box-shadow: 0px 0px 8px 4px rgb(211, 171, 145) inset !important;
+  -moz-box-shadow: 0px 0px 8px 4px rgba(99, 0, 30, 0.74) inset !important;
+}
+
+.expense-contentbtnPurple:hover {
+  background: rgb(243, 156, 207) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(167, 70, 135) 0%,
+    rgb(208, 123, 172),
+    rgb(182, 98, 154) 33%,
+    58%,
+    rgb(231, 139, 194) 76%
+  ) !important;
+}
+
+.ExpenseWrapperPurple {
+  background: rgb(255, 255, 255) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(255, 255, 255) 30%,
+    rgb(225, 198, 180) 77%
+  ) !important;
+  box-shadow: 0px 0px 14px 5px rgba(147, 69, 82, 0.74) !important;
+  -webkit-box-shadow: 0px 0px 14px 5px rgba(117, 63, 14, 0.74) !important;
+  -moz-box-shadow: 0px 0px 14px 5px rgba(233, 159, 129, 0.891) !important;
+}
+
+.bodyPurple {
+  background: rgb(243, 156, 207) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(167, 70, 135) 0%,
+    rgb(208, 123, 172),
+    rgb(182, 98, 154) 33%,
+    58%,
+    rgb(231, 139, 194) 76%
+  ) !important;
+}
+
+.expense-itemPurple {
+  box-shadow: 0px 0px 14px 5px rgba(147, 69, 82, 0.74) !important;
+  -webkit-box-shadow: 0px 0px 14px 5px rgba(117, 63, 14, 0.74) !important;
+  -moz-box-shadow: 0px 0px 14px 5px rgba(233, 159, 129, 0.891) !important;
+}
+.SettingsformPurple {
+  background: rgb(255, 255, 255) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(255, 255, 255) 30%,
+    rgb(225, 198, 180) 77%
+  ) !important;
+}
+.SettingsformbuttonPurple {
+  box-shadow: 0px 0px 14px 5px rgba(147, 69, 82, 0.74) !important;
+  -webkit-box-shadow: 0px 0px 14px 5px rgba(117, 63, 14, 0.74) !important;
+  -moz-box-shadow: 0px 0px 14px 5px rgba(233, 159, 129, 0.891) !important;
+}
+
+/* Dark */
+.navbardark {
+  background: rgb(5, 1, 29) !important;
+  background: linear-gradient(
+    18deg,
+    rgba(5, 1, 29, 1) 5%,
+    rgba(66, 78, 104, 1) 30%,
+    rgba(4, 17, 51, 1) 46%,
+    rgba(53, 65, 90, 1) 62%,
+    rgba(2, 2, 41, 1) 85%
+  ) !important;
+  height: 10vh;
+  z-index: 1 !important;
+  width: 100%;
+}
+
+.expense-contentbtnDark {
+  background: rgb(249, 241, 246) !important;
+  background: linear-gradient(
+    18deg,
+    rgb(90, 86, 119) 5%,
+    rgba(15, 26, 59, 1) 85%
+  ) !important;
+  box-shadow: 0px 0px 8px 4px rgba(9, 209, 162, 0.74) inset !important;
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(132, 182, 194, 0.74) inset !important;
+  -moz-box-shadow: 0px 0px 8px 4px rgba(9, 209, 186, 0.74) inset !important;
+  /* color: white; */
+}
+
+.expense-contentbtnDark:hover {
+  background: rgb(5, 1, 29) !important;
+  background: linear-gradient(
+    18deg,
+    rgba(5, 1, 29, 1) 5%,
+    rgba(66, 78, 104, 1) 30%,
+    rgba(4, 17, 51, 1) 46%,
+    rgba(53, 65, 90, 1) 62%,
+    rgba(2, 2, 41, 1) 85%
+  ) !important;
+  /* color: white; */
+}
+
+.ExpenseWrapperDark {
+  background: rgb(249, 241, 246) !important;
+  background: linear-gradient(
+    18deg,
+    rgba(249, 241, 246, 1) 5%,
+    rgba(15, 26, 59, 1) 85%
+  ) !important;
+  box-shadow: 0px 0px 14px 5px rgba(0, 99, 51, 0.74) !important;
+  -webkit-box-shadow: 0px 0px 14px 5px rgba(0, 99, 81, 0.74) !important;
+  -moz-box-shadow: 0px 0px 14px 5px rgba(89, 99, 0, 0.74) !important;
+}
+
+.bodyDark {
+  background: rgb(5, 1, 29) !important;
+  background: linear-gradient(
+    18deg,
+    rgba(5, 1, 29, 1) 5%,
+    rgba(66, 78, 104, 1) 30%,
+    rgba(4, 17, 51, 1) 46%,
+    rgba(53, 65, 90, 1) 62%,
+    rgba(2, 2, 41, 1) 85%
+  ) !important;
+}
+
+.expense-itemdark {
+  box-shadow: 0px 0px 14px 5px rgba(0, 99, 51, 0.74) !important;
+  -webkit-box-shadow: 0px 0px 14px 5px rgba(0, 99, 81, 0.74) !important;
+  -moz-box-shadow: 0px 0px 14px 5px rgba(89, 99, 0, 0.74) !important;
+}
+
+.SettingsformDark {
+  background: rgb(249, 241, 246);
+  background: linear-gradient(
+    18deg,
+    rgba(249, 241, 246, 1) 5%,
+    rgba(15, 26, 59, 1) 85%
+  );
+}
+.SettingsformbuttonDark {
+  box-shadow: 0px 0px 14px 5px rgba(0, 99, 51, 0.74) !important;
+  -webkit-box-shadow: 0px 0px 14px 5px rgba(0, 99, 81, 0.74) !important;
+  -moz-box-shadow: 0px 0px 14px 5px rgba(89, 99, 0, 0.74) !important;
+}
+
+.expensedetailsDark {
+  height: 400px;
+  background: rgb(99, 106, 124) !important;
+  background: radial-gradient(
+    circle,
+    rgba(99, 106, 124, 1) 24%,
+    rgba(41, 41, 55, 1) 56%,
+    rgba(0, 0, 0, 1) 100%
+  ) !important;
+}
+.profileformDark {
+  height: 400px;
+  background: rgb(99, 106, 124) !important;
+  background: radial-gradient(
+    circle,
+    rgba(99, 106, 124, 1) 24%,
+    rgba(41, 41, 55, 1) 56%,
+    rgba(0, 0, 0, 1) 100%
+  ) !important;
+  box-shadow: 0px 0px 14px 5px rgba(0, 99, 51, 0.74) !important;
+  -webkit-box-shadow: 0px 0px 14px 5px rgba(0, 99, 81, 0.74) !important;
+  -moz-box-shadow: 0px 0px 14px 5px rgba(89, 99, 0, 0.74) !important;
+}
+
+.mainLayoutDark,
+.profileDark,
+.formdivDark {
+  background: rgb(99, 106, 124) !important;
+  background: radial-gradient(
+    circle,
+    rgba(99, 106, 124, 1) 24%,
+    rgba(41, 41, 55, 1) 56%,
+    rgba(0, 0, 0, 1) 100%
+  ) !important;
+}
+
+.darkwriting1 {
+  background: -webkit-linear-gradient(
+    to right,
+    #160a83 0%,
+    #229597 46%,
+    #229597 50%,
+    #229597 53%,
+    #229597 76%,
+    #229597 87%,
+    #229597 100%
+  ) !important;
+  background: -moz-linear-gradient(
+    to right,
+    #229597 0%,
+    #229597 46%,
+    #229597 50%,
+    #229597 53%,
+    #229597 76%,
+    #229597 87%,
+    #229597 100%
+  ) !important;
+  background: linear-gradient(
+    to right,
+    #229597 0%,
+    #229597 46%,
+    #229597 50%,
+    #229597 53%,
+    #229597 76%,
+    #229597 87%,
+    #229597 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.darkwriting2 {
+  background: -webkit-linear-gradient(
+    to right,
+    #121414 0%,
+    #404242 46%,
+    #5c6263 50%,
+    #647374 53%,
+    #373a3a 76%,
+    #608586 87%,
+    #3a6e70 100%
+  ) !important;
+  background: -moz-linear-gradient(
+    to right,
+    #121414 0%,
+    #404242 46%,
+    #5c6263 50%,
+    #647374 53%,
+    #495252 76%,
+    #608586 87%,
+    #3a6e70 100%
+  ) !important;
+  background: linear-gradient(
+    to right,
+    #121414 0%,
+    #404242 46%,
+    #5c6263 50%,
+    #647374 53%,
+    #454b4b 76%,
+    #608586 87%,
+    #3a6e70 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.darkwriting3 {
+  background: -webkit-linear-gradient(
+    to right,
+    #03f8f8 0%,
+    #03f8f8 46%,
+    #03f8f8 50%,
+    #03f8f8 53%,
+    #03f8f8 76%,
+    #03f8f8 87%,
+    #03f8f8 100%
+  ) !important;
+  background: -moz-linear-gradient(
+    to right,
+    #03f8f8 0%,
+    #03f8f8 46%,
+    #03f8f8 50%,
+    #03f8f8 53%,
+    #03f8f8 76%,
+    #03f8f8 87%,
+    #03f8f8 100%
+  );
+  background: linear-gradient(
+    to right,
+    #03f8f8 0%,
+    #03f8f8 46%,
+    #03f8f8 50%,
+    #03f8f8 53%,
+    #03f8f8 76%,
+    #03f8f8 87%,
+    #03f8f8 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }

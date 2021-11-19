@@ -21,11 +21,6 @@ export default (state, action) => {
         ...state,
         filterDate: action.payload,
       };
-    case "ADD_THEME":
-      return {
-        ...state,
-        theme: action.payload,
-      };
 
     case "ADD_NAME":
       return {
@@ -50,6 +45,25 @@ export default (state, action) => {
         ...state,
         application: action.payload,
       };
+    case "FILTER_ITEM":
+      return {
+        ...state,
+        filterItem: state.expenses.find((item) => item.id === action.payload),
+      };
+    case "EDIT_ITEM":
+      if (state.application.budget) {
+        state.expenses.forEach((item) => {
+          if ((item.id = action.payload.id)) {
+            state.expenses.item = [...action.payload];
+          }
+        });
+      } else {
+        state.fitness.forEach((item) => {
+          if ((item.id = action.payload.id)) {
+            state.fitness.item = [...action.payload];
+          }
+        });
+      }
 
     default:
       return state;

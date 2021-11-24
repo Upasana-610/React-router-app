@@ -10,6 +10,7 @@ import Profile from "./Pages/Profile/Profile";
 import { Fragment, useContext } from "react";
 import EditExpense from "./Pages/EditExpense/EditExpense";
 import { LayoutContext, LayoutProvider } from "./context/LayoutContext";
+import PracticeHook from "./components/PracticeHook";
 
 function App() {
   let { theme } = useContext(GlobalContext);
@@ -27,6 +28,7 @@ function App() {
               <Route exact path="/layout" component={Layout} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/editList/:id" component={EditExpense} />
+              {/* <Route exact path="/" component={PracticeHook} /> */}
             </Switch>
           </Router>
         </GlobalProvider>

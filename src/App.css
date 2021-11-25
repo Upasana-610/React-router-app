@@ -997,36 +997,37 @@ form textarea {
 .darkwriting1 {
   background: -webkit-linear-gradient(
     to right,
-    #160a83 0%,
-    #229597 46%,
-    #229597 50%,
-    #229597 53%,
-    #229597 76%,
-    #229597 87%,
+    #fafafd 0%,
+    #b1c7c7 46%,
+    #c4d3d3 50%,
+    #f7fafa 53%,
+    #b2c8c9 76%,
+    #f9fcfc 87%,
     #229597 100%
   ) !important;
   background: -moz-linear-gradient(
     to right,
-    #229597 0%,
-    #229597 46%,
-    #229597 50%,
-    #229597 53%,
-    #229597 76%,
-    #229597 87%,
-    #229597 100%
+    #fafafd 0%,
+    #b1c7c7 46%,
+    #c4d3d3 50%,
+    #f7fafa 53%,
+    #b2c8c9 76%,
+    #f9fcfc 87%,
+    #c1cfcf 100%
   ) !important;
   background: linear-gradient(
     to right,
-    #229597 0%,
-    #229597 46%,
-    #229597 50%,
-    #229597 53%,
-    #229597 76%,
-    #229597 87%,
-    #229597 100%
+    #fafafd 0%,
+    #b1c7c7 46%,
+    #c4d3d3 50%,
+    #f7fafa 53%,
+    #b2c8c9 76%,
+    #f9fcfc 87%,
+    #c1cfcf 100%
   ) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
+  font-weight: 20 !important;
 }
 
 .darkwriting2 {
@@ -1067,34 +1068,35 @@ form textarea {
 .darkwriting3 {
   background: -webkit-linear-gradient(
     to right,
-    #03f8f8 0%,
-    #03f8f8 46%,
-    #03f8f8 50%,
-    #03f8f8 53%,
-    #03f8f8 76%,
-    #03f8f8 87%,
-    #03f8f8 100%
+    #b8cece 0%,
+    #f3f7f7 46%,
+    #bacccc 50%,
+    #c9d4d4 53%,
+    #fdfdfd 76%,
+    rgb(203, 216, 216) 87%,
+    #e8eeee 100%
   ) !important;
   background: -moz-linear-gradient(
     to right,
-    #03f8f8 0%,
-    #03f8f8 46%,
-    #03f8f8 50%,
-    #03f8f8 53%,
-    #03f8f8 76%,
-    #03f8f8 87%,
-    #03f8f8 100%
+    #b8cece 0%,
+    #f3f7f7 46%,
+    #bacccc 50%,
+    #c9d4d4 53%,
+    #fdfdfd 76%,
+    rgb(236, 241, 241) 87%,
+    #e8eeee 100%
   );
   background: linear-gradient(
     to right,
-    #03f8f8 0%,
-    #03f8f8 46%,
-    #03f8f8 50%,
-    #03f8f8 53%,
-    #03f8f8 76%,
-    #03f8f8 87%,
-    #03f8f8 100%
+    #b8cece 0%,
+    #f3f7f7 46%,
+    #bacccc 50%,
+    #c9d4d4 53%,
+    #fdfdfd 76%,
+    rgb(202, 212, 212) 87%,
+    #e8eeee 100%
   ) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
+  font-weight: 500 !important;
 }

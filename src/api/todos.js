@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useParams } from "react-router";
 import { useState } from "react/cjs/react.production.min";
-
+//a
 export const fetchPost = async () => {
   try {
     let posts = await axios.get("https://jsonplaceholder.typicode.com/posts");
